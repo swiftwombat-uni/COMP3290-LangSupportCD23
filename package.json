@@ -1,0 +1,25 @@
+{
+  "name": "cd23",
+  "displayName": "CD23",
+  "description": "CD23 Source Language Support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "cd23",
+      "aliases": ["CD23 Source Language", "cd23"],
+      "extensions": [".cd"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "cd23",
+      "scopeName": "source.cd",
+      "path": "./syntaxes/cd23.tmLanguage.json"
+    }]
+  }
+}

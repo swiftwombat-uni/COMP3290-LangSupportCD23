@@ -1,0 +1,136 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CD23 Source Language",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#access-modifiers"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#reserved-words"
+		},
+		{
+			"include": "#ctrl-statements"
+		}
+	],
+	"repository": {
+		"comments": {
+            "name": "comment.cd23",
+            "patterns": [
+                {
+                    "include": "#comments-block"
+                },
+                {
+                    "include": "#comments-line"
+                }
+            ]
+        },
+        "comments-block": {
+            "begin": "/\\*\\*",
+            "end": "\\*\\*/",
+            "name": "comment.block.cd23"
+        },
+        "comments-line": {
+            "match": "(/--).*$\\n?",
+            "name": "comment.line.cd23"
+        },
+		"operators": {
+            "name": "keyword.operator.cd23",
+            "patterns": [
+                {
+                    "include": "#assignment-operators"
+                },
+                {
+                    "include": "#comparison-operators"
+                },
+                {
+                    "include": "#condition-operators"
+                },
+                {
+                    "include": "#manipulative-operators"
+                }
+            ]
+        },
+        "assignment-operators": {
+            "match": "(=|:|>>|<<|\\+=|\\-=|\\*=|/=)",
+            "name": "keyword.operator.assignment.cd23"
+        },
+        "comparison-operators": {
+            "match": "==|!=|>|<|<=|>=",
+            "name": "keyword.operator.comparison.cd23"
+        },
+        "condition-operators": {
+            "match": "!|&&|\\|\\||&\\|",
+            "name": "keyword.operator.condition.cd23"
+        },
+		"manipulative-operators": {
+            "match": "\\*|/|\\-|\\+|%|\\^|\\%",
+            "name": "keyword.operator.manipulative.cd23"
+        },
+		"literals": {
+            "name": "constant.cd23",
+            "patterns": [
+                {
+                    "include": "#boolean-literals"
+                },
+                {
+                    "include": "#numeric-literals"
+                }
+            ]
+        },
+        "boolean-literals": {
+            "match": "\\b(?i)(true|false)\\b",
+            "name": "constant.language.boolean.cd23"
+        },
+		"numeric-literals": {
+            "match": "\\b(([0-9]+[.][0-9]+)|([0-9]+))\\b",
+            "name": "constant.numeric.cd23"
+        },
+		"access-modifiers": {
+            "name": "storage.modifier.cd23",
+            "match": "\\b(?i)(constants|types|arrays|main)\\b"
+        },
+		"types": {
+            "name": "storage.type.built-in.primitive.cd23",
+            "match": "\\b(?i)(array|const|integer|real|boolean|void)\\b"
+        },
+		"ctrl-statements": {
+			"patterns": [{
+				"name": "keyword.control.cd23",
+				"match": "\\b(?i)(if|else|begin|end|repeat|until|for|return)\\b"
+			}]
+		},
+		"reserved-words": {
+			"patterns": [{
+				"name": "entity.name.function.member.cd23",
+				"match": "\\b(?i)(cd23|is|of|func|in|out|line)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.cd23",
+			"begin": "\"",
+			"end": "\"|\\n",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cd23",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.cd"
+}
