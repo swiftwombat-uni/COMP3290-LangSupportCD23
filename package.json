@@ -3,6 +3,11 @@
   "displayName": "CD23",
   "description": "CD23 Source Language Support",
   "version": "0.0.1",
+  "publisher": "swiftwombat",
+  "icon": "./images/wombat-icon.png",
+  "repository": {
+    "url": "https://github.com/swiftwombat-uni/COMP3290-SourceHighlighting"
+  },
   "engines": {
     "vscode": "^1.81.0"
   },
