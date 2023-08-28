@@ -62,6 +62,9 @@
                 },
                 {
                     "include": "#manipulative-operators"
+                },
+                {
+                    "include": "#punctuations"
                 }
             ]
         },
@@ -80,6 +83,10 @@
 		"manipulative-operators": {
             "match": "\\*|/|\\-|\\+|%|\\^|\\%",
             "name": "keyword.operator.manipulative.cd23"
+        },
+		"punctuations": {
+            "match": ";|,|\\.",
+            "name": "punctuation.cd23"
         },
 		"literals": {
             "name": "constant.cd23",
