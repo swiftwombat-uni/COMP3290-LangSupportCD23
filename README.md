@@ -4,16 +4,8 @@ The CD23 extension adds language support for the COMP3290 CD23 source language t
 
 ## Features
 
-This extension adds basic syntax highlighting to CD23 files (denoted by the .cd extension). The following tokens are currenty highlighted:
-- Comments (inline and block)
-- Operators
-- Literals (bools, ints and reals)
-- Strings
-- CD23 Keywords
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Note: The syntax highlighting is only basic and is based on the CD23 langauge spec provided by COMP3290 in semester 2 of 2023.
+This extension adds basic syntax highlighting to CD23 files (denoted by the .cd extension). Tokens that are currenty highlighted are comments, operators, literals, strings and CD23 Keywords
+![code](https://github.com/swiftwombat-uni/COMP3290-SourceHighlighting/assets/61484083/51a75b65-ecd1-4b1d-b32b-aef5641b303d)
 
 ## Release Notes
 
